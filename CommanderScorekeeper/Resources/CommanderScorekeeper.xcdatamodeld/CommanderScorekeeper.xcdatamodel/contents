@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GameAction" representedClassName="GameAction" syncable="YES">
+        <attribute name="actionDescription" attributeType="String" defaultValueString=""/>
+        <attribute name="actorID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="previousStateData" optional="YES" attributeType="Binary"/>
+        <attribute name="targetID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="typeString" attributeType="String" defaultValueString="life_change"/>
+        <attribute name="value" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="gameSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameSession" inverseName="actionLog" inverseEntity="GameSession"/>
+    </entity>
+    <entity name="GameSession" representedClassName="GameSession" syncable="YES">
+        <attribute name="duration" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="actionLog" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GameAction" inverseName="gameSession" inverseEntity="GameAction"/>
+        <relationship name="players" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Player" inverseName="gameSession" inverseEntity="Player"/>
+    </entity>
+    <entity name="Player" representedClassName="Player" syncable="YES">
+        <attribute name="colorIdentityString" attributeType="String" defaultValueString=""/>
+        <attribute name="commanderDamageData" optional="YES" attributeType="Binary"/>
+        <attribute name="commanderName" attributeType="String" defaultValueString=""/>
+        <attribute name="currentLife" attributeType="Integer 32" defaultValueString="40" usesScalarValueType="YES"/>
+        <attribute name="eliminationReason" optional="YES" attributeType="String"/>
+        <attribute name="energyCounters" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="experienceCounters" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hasInitiative" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="hasMonarch" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isEliminated" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="poisonCounters" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="position" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="voiceProfile" optional="YES" attributeType="Binary"/>
+        <relationship name="gameSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GameSession" inverseName="players" inverseEntity="GameSession"/>
+    </entity>
+</model>

@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Atraxa, Praetors' Voice",
+    "colorIdentity": ["W", "U", "B", "G"],
+    "type": "Legendary Creature — Phyrexian Angel",
+    "power": "4",
+    "toughness": "4"
+  },
+  {
+    "name": "Edgar Markov",
+    "colorIdentity": ["W", "B", "R"],
+    "type": "Legendary Creature — Vampire Knight",
+    "power": "4",
+    "toughness": "4"
+  },
+  {
+    "name": "The Ur-Dragon",
+    "colorIdentity": ["W", "U", "B", "R", "G"],
+    "type": "Legendary Creature — Dragon Avatar",
+    "power": "10",
+    "toughness": "10"
+  },
+  {
+    "name": "Muldrotha, the Gravetide",
+    "colorIdentity": ["U", "B", "G"],
+    "type": "Legendary Creature — Elemental Avatar",
+    "power": "6",
+    "toughness": "6"
+  },
+  {
+    "name": "Prossh, Skyraider of Kher",
+    "colorIdentity": ["B", "R", "G"],
+    "type": "Legendary Creature — Dragon",
+    "power": "5",
+    "toughness": "5"
+  },
+  {
+    "name": "Kaalia of the Vast",
+    "colorIdentity": ["W", "B", "R"],
+    "type": "Legendary Creature — Human Cleric",
+    "power": "2",
+    "toughness": "2"
+  },
+  {
+    "name": "Omnath, Locus of Creation",
+    "colorIdentity": ["W", "U", "R", "G"],
+    "type": "Legendary Creature — Elemental",
+    "power": "4",
+    "toughness": "4"
+  },
+  {
+    "name": "Teysa Karlov",
+    "colorIdentity": ["W", "B"],
+    "type": "Legendary Creature — Human Advisor",
+    "power": "2",
+    "toughness": "4"
+  },
+  {
+    "name": "Korvold, Fae-Cursed King",
+    "colorIdentity": ["B", "R", "G"],
+    "type": "Legendary Creature — Dragon Noble",
+    "power": "4",
+    "toughness": "4"
+  },
+  {
+    "name": "Krenko, Mob Boss",
+    "colorIdentity": ["R"],
+    "type": "Legendary Creature — Goblin Warrior",
+    "power": "3",
+    "toughness": "3"
+  },
+  {
+    "name": "Ghave, Guru of Spores",
+    "colorIdentity": ["W", "B", "G"],
+    "type": "Legendary Creature — Fungus Shaman",
+    "power": "0",
+    "toughness": "0"
+  },
+  {
+    "name": "Breya, Etherium Shaper",
+    "colorIdentity": ["W", "U", "B", "R"],
+    "type": "Legendary Artifact Creature — Human",
+    "power": "4",
+    "toughness": "4"
+  },
+  {
+    "name": "Oloro, Ageless Ascetic",
+    "colorIdentity": ["W", "U", "B"],
+    "type": "Legendary Creature — Giant Soldier",
+    "power": "4",
+    "toughness": "5"
+  },
+  {
+    "name": "Narset, Enlightened Master",
+    "colorIdentity": ["W", "U", "R"],
+    "type": "Legendary Creature — Human Monk",
+    "power": "3",
+    "toughness": "2"
+  },
+  {
+    "name": "Ezuri, Claw of Progress",
+    "colorIdentity": ["U", "G"],
+    "type": "Legendary Creature — Elf Warrior",
+    "power": "3",
+    "toughness": "3"
+  },
+  {
+    "name": "Animar, Soul of Elements",
+    "colorIdentity": ["U", "R", "G"],
+    "type": "Legendary Creature — Elemental",
+    "power": "1",
+    "toughness": "1"
+  },
+  {
+    "name": "Sliver Overlord",
+    "colorIdentity": ["W", "U", "B", "R", "G"],
+    "type": "Legendary Creature — Sliver Mutant",
+    "power": "7",
+    "toughness": "7"
+  },
+  {
+    "name": "Yuriko, the Tiger's Shadow",
+    "colorIdentity": ["U", "B"],
+    "type": "Legendary Creature — Human Ninja",
+    "power": "1",
+    "toughness": "3"
+  },
+  {
+    "name": "Nekusar, the Mindrazer",
+    "colorIdentity": ["U", "B", "R"],
+    "type": "Legendary Creature — Zombie Wizard",
+    "power": "2",
+    "toughness": "4"
+  },
+  {
+    "name": "Meren of Clan Nel Toth",
+    "colorIdentity": ["B", "G"],
+    "type": "Legendary Creature — Human Shaman",
+    "power": "3",
+    "toughness": "4"
+  },
+  {
+    "name": "Karador, Ghost Chieftain",
+    "colorIdentity": ["W", "B", "G"],
+    "type": "Legendary Creature — Centaur Spirit",
+    "power": "3",
+    "toughness": "4"
+  },
+  {
+    "name": "Derevi, Empyrial Tactician",
+    "colorIdentity": ["W", "U", "G"],
+    "type": "Legendary Creature — Bird Wizard",
+    "power": "2",
+    "toughness": "3"
+  },
+  {
+    "name": "Tasigur, the Golden Fang",
+    "colorIdentity": ["U", "B", "G"],
+    "type": "Legendary Creature — Human Shaman",
+    "power": "4",
+    "toughness": "5"
+  },
+  {
+    "name": "Saskia the Unyielding",
+    "colorIdentity": ["W", "B", "R", "G"],
+    "type": "Legendary Creature — Human Soldier",
+    "power": "3",
+    "toughness": "4"
+  },
+  {
+    "name": "Zur the Enchanter",
+    "colorIdentity": ["W", "U", "B"],
+    "type": "Legendary Creature — Human Wizard",
+    "power": "1",
+    "toughness": "4"
+  },
+  {
+    "name": "Urza, Lord High Artificer",
+    "colorIdentity": ["U"],
+    "type": "Legendary Creature — Human Artificer",
+    "power": "1",
+    "toughness": "4"
+  },
+  {
+    "name": "Chulane, Teller of Tales",
+    "colorIdentity": ["W", "U", "G"],
+    "type": "Legendary Creature — Human Druid",
+    "power": "2",
+    "toughness": "3"
+  },
+  {
+    "name": "Kenrith, the Returned King",
+    "colorIdentity": ["W", "U", "B", "R", "G"],
+    "type": "Legendary Creature — Human Noble",
+    "power": "5",
+    "toughness": "5"
+  },
+  {
+    "name": "Golos, Tireless Pilgrim",
+    "colorIdentity": ["W", "U", "B", "R", "G"],
+    "type": "Legendary Artifact Creature — Scout",
+    "power": "3",
+    "toughness": "5"
+  },
+  {
+    "name": "Kess, Dissident Mage",
+    "colorIdentity": ["U", "B", "R"],
+    "type": "Legendary Creature — Human Wizard",
+    "power": "3",
+    "toughness": "4"
+  },
+  {
+    "name": "Thrasios, Triton Hero",
+    "colorIdentity": ["U", "G"],
+    "type": "Legendary Creature — Merfolk Wizard",
+    "power": "1",
+    "toughness": "3"
+  },
+  {
+    "name": "Tymna the Weaver",
+    "colorIdentity": ["W", "B"],
+    "type": "Legendary Creature — Human Cleric",
+    "power": "2",
+    "toughness": "2"
+  },
+  {
+    "name": "Najeela, the Blade-Blossom",
+    "colorIdentity": ["W", "U", "B", "R", "G"],
+    "type": "Legendary Creature — Human Warrior",
+    "power": "3",
+    "toughness": "2"
+  },
+  {
+    "name": "Gitrog Monster",
+    "colorIdentity": ["B", "G"],
+    "type": "Legendary Creature — Frog Horror",
+    "power": "6",
+    "toughness": "6"
+  },
+  {
+    "name": "Winota, Joiner of Forces",
+    "colorIdentity": ["W", "R"],
+    "type": "Legendary Creature — Human Warrior",
+    "power": "4",
+    "toughness": "4"
+  },
+  {
+    "name": "Sisay, Weatherlight Captain",
+    "colorIdentity": ["W", "U", "B", "R", "G"],
+    "type": "Legendary Creature — Human Soldier",
+    "power": "2",
+    "toughness": "2"
+  },
+  {
+    "name": "Hapatra, Vizier of Poisons",
+    "colorIdentity": ["B", "G"],
+    "type": "Legendary Creature — Human Cleric",
+    "power": "2",
+    "toughness": "2"
+  },
+  {
+    "name": "Kumena, Tyrant of Orazca",
+    "colorIdentity": ["U", "G"],
+    "type": "Legendary Creature — Merfolk Shaman",
+    "power": "2",
+    "toughness": "4"
+  },
+  {
+    "name": "Zacama, Primal Calamity",
+    "colorIdentity": ["W", "R", "G"],
+    "type": "Legendary Creature — Elder Dinosaur",
+    "power": "9",
+    "toughness": "9"
+  },
+  {
+    "name": "Selvala, Heart of the Wilds",
+    "colorIdentity": ["G"],
+    "type": "Legendary Creature — Elf Scout",
+    "power": "2",
+    "toughness": "3"
+  },
+  {
+    "name": "Grand Arbiter Augustin IV",
+    "colorIdentity": ["W", "U"],
+    "type": "Legendary Creature — Human Advisor",
+    "power": "2",
+    "toughness": "3"
+  },
+  {
+    "name": "Aminatou, the Fateshifter",
+    "colorIdentity": ["W", "U", "B"],
+    "type": "Legendary Planeswalker — Aminatou",
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Lord Windgrace",
+    "colorIdentity": ["B", "R", "G"],
+    "type": "Legendary Planeswalker — Windgrace",
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Estrid, the Masked",
+    "colorIdentity": ["W", "U", "G"],
+    "type": "Legendary Planeswalker — Estrid",
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Teferi, Temporal Archmage",
+    "colorIdentity": ["U"],
+    "type": "Legendary Planeswalker — Teferi",
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Jhoira, Weatherlight Captain",
+    "colorIdentity": ["U", "R"],
+    "type": "Legendary Creature — Human Artificer",
+    "power": "3",
+    "toughness": "3"
+  },
+  {
+    "name": "Slimefoot, the Stowaway",
+    "colorIdentity": ["B", "G"],
+    "type": "Legendary Creature — Fungus",
+    "power": "2",
+    "toughness": "3"
+  },
+  {
+    "name": "Mikaeus, the Unhallowed",
+    "colorIdentity": ["B"],
+    "type": "Legendary Creature — Zombie Cleric",
+    "power": "5",
+    "toughness": "5"
+  },
+  {
+    "name": "Omnath, Locus of Rage",
+    "colorIdentity": ["R", "G"],
+    "type": "Legendary Creature — Elemental",
+    "power": "5",
+    "toughness": "5"
+  },
+  {
+    "name": "Riku of Two Reflections",
+    "colorIdentity": ["U", "R", "G"],
+    "type": "Legendary Creature — Human Wizard",
+    "power": "2",
+    "toughness": "2"
+  }
+]
