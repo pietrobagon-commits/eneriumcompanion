@@ -14,6 +14,7 @@ struct GameView: View {
     // MARK: - Properties
 
     @StateObject private var viewModel: GameViewModel
+    @StateObject private var voiceViewModel: VoiceRecognitionViewModel
 
     @State private var showMenu = false
     @State private var showActionLog = false
@@ -24,7 +25,9 @@ struct GameView: View {
     // MARK: - Initialization
 
     init(session: GameSession) {
-        _viewModel = StateObject(wrappedValue: GameViewModel(session: session))
+        let gameVM = GameViewModel(session: session)
+        _viewModel = StateObject(wrappedValue: gameVM)
+        _voiceViewModel = StateObject(wrappedValue: VoiceRecognitionViewModel(gameViewModel: gameVM))
     }
 
     // MARK: - Body
@@ -69,10 +72,20 @@ struct GameView: View {
             .confirmationDialog("Menu", isPresented: $showMenu) {
                 menuOptions
             }
+            .confirmationDialog("Chi ha parlato?", isPresented: $voiceViewModel.showSpeakerSelection) {
+                speakerSelectionOptions
+            }
         }
         .statusBar(hidden: false)
         .persistentSystemOverlays(.hidden)
         .preferredColorScheme(.dark)
+        .task {
+            // Auto-start voice recognition on appear (Phase 2)
+            // await voiceViewModel.startVoiceRecognition()
+        }
+        .onDisappear {
+            voiceViewModel.stopVoiceRecognition()
+        }
     }
 
     // MARK: - Quadrant Layout
@@ -158,6 +171,11 @@ struct GameView: View {
             .padding(.vertical, 8)
             .background(Constants.Colors.backgroundSecondary.opacity(0.9))
             .cornerRadius(Constants.Layout.smallCornerRadius)
+
+            Spacer()
+
+            // Voice indicator (Phase 2)
+            VoiceIndicator(voiceViewModel: voiceViewModel)
 
             Spacer()
 
@@ -258,6 +276,13 @@ struct GameView: View {
 
     private var menuOptions: some View {
         Group {
+            // Voice toggle (Phase 2)
+            Button(voiceViewModel.isActive ? "Disattiva Voce" : "Attiva Voce") {
+                Task {
+                    await voiceViewModel.toggleVoiceRecognition()
+                }
+            }
+
             Button("Salva Partita") {
                 viewModel.saveGame()
             }
@@ -272,6 +297,16 @@ struct GameView: View {
             }
 
             Button("Annulla", role: .cancel) {}
+        }
+    }
+
+    // MARK: - Speaker Selection
+
+    private var speakerSelectionOptions: some View {
+        ForEach(viewModel.players, id: \.id) { player in
+            Button(player.name) {
+                voiceViewModel.executeCommandForSpeaker(player)
+            }
         }
     }
 }

@@ -19,6 +19,9 @@ struct PlayerSetupCard: View {
     @FocusState private var isCommanderFocused: Bool
 
     @State private var showCommanderPicker = false
+    @State private var showVoiceCalibration = false
+
+    @StateObject private var speakerService = SpeakerIdentificationService()
 
     private var player: PlayerConfiguration {
         viewModel.players[playerIndex]
@@ -42,6 +45,11 @@ struct PlayerSetupCard: View {
                 colorIdentityPicker
             }
 
+            // Voice Calibration (Phase 2)
+            if !player.name.isEmpty {
+                voiceCalibrationButton
+            }
+
             // Validation Status
             validationStatus
 
@@ -54,6 +62,13 @@ struct PlayerSetupCard: View {
             ? [Constants.Colors.magicGold]
             : player.colorIdentity.map { Color.manaColor(for: $0) }
         )
+        .sheet(isPresented: $showVoiceCalibration) {
+            VoiceCalibrationView(
+                playerConfig: player,
+                playerIndex: playerIndex,
+                speakerService: speakerService
+            )
+        }
     }
 
     // MARK: - Header
@@ -180,6 +195,43 @@ struct PlayerSetupCard: View {
                     }
                 }
             }
+        }
+    }
+
+    // MARK: - Voice Calibration Button
+
+    private var voiceCalibrationButton: some View {
+        Button(action: {
+            showVoiceCalibration = true
+        }) {
+            HStack {
+                Image(systemName: "waveform")
+                    .font(.body)
+
+                Text("Calibra Voce (Opzionale)")
+                    .font(.subheadline)
+
+                Spacer()
+
+                // Progress indicator
+                let progress = player.voiceCalibrationProgress
+                if progress > 0 {
+                    Text("\(progress)/3")
+                        .font(.caption)
+                        .foregroundColor(Constants.Colors.success)
+
+                    Image(systemName: progress >= 3 ? "checkmark.circle.fill" : "circle.fill")
+                        .foregroundColor(progress >= 3 ? Constants.Colors.success : Constants.Colors.warning)
+                }
+
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundColor(Constants.Colors.textSecondary)
+            }
+            .padding()
+            .background(Constants.Colors.backgroundPrimary)
+            .cornerRadius(Constants.Layout.smallCornerRadius)
+            .foregroundColor(Constants.Colors.textPrimary)
         }
     }
 
